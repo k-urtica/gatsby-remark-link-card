@@ -1,6 +1,9 @@
 const visit = require('unist-util-visit')
 const puppeteer = require('puppeteer')
 
+// Provisional fix for MaxListenersExceededWarning
+process.setMaxListeners(50)
+
 const { defaultOption } = require('./shared/defaultOption')
 
 const ErrorFormat = {
